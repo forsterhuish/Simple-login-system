@@ -133,7 +133,7 @@ export default function SignIn_Form() {
       <Grid container>
         <Grid item>
             <Link component="button" variant="body2"
-                onclick={(e) => {
+                onclick={() => {
                     ReactDOM.render(
                         <React.StrictMode>
                           <SignIn />
