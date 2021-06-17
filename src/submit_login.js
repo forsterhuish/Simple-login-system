@@ -21,5 +21,31 @@ import App from './App';
 export default function Submit_Login() {
   const classes = useStyles();
 
-
+  return (
+    <Container component="main" maxWidth="xs">
+      <CssBaseline />
+      <div className={classes.paper}>
+        <Typography component="h1" variant="h5">
+          You have successfully logined!
+        </Typography>
+        <Button
+            type="button"
+            fullWidth
+            variant="contained"
+            color="primary"
+            className={classes.submit}
+            onClick={() => {
+              ReactDOM.render(
+                <React.StrictMode>
+                  <App />
+                </React.StrictMode>,
+                document.getElementById('root')
+              );
+            }}
+          >
+            Home
+          </Button>
+      </div>
+    </Container>
+  );
 }

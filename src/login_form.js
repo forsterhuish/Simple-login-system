@@ -16,6 +16,7 @@ import { useStyles } from './typography';
 
 import ReactDOM from 'react-dom';
 import SignUp from './register';
+import Successful_Login from './submit_login'
 import App from './App';
 
 export default function SignIn_Form() {
@@ -50,11 +51,19 @@ export default function SignIn_Form() {
             label="Remember me"
           />
           <Button
-            type="submit"
+            type="button"
             fullWidth
             variant="contained"
             color="primary"
             className={classes.submit}
+            onClick={() => {
+              ReactDOM.render(
+                <React.StrictMode>
+                  <Successful_Login />
+                </React.StrictMode>,
+                document.getElementById('root')
+              );
+            }}
           >
             Login
           </Button>
